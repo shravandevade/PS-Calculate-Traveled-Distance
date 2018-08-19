@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.psquare.delivery">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".ApplicationManager"
+        android:allowBackup="true"
+        android:icon="@drawable/p_square"
+        android:label="PSquare Delivery"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SurveyMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegistrationActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAUrawQIplxHnrKjyOrxQBZw0MbvSCYVqU" />
+
+        <!--
+                    <meta-data
+                    android:name="com.google.android.geo.API_KEY"
+                    android:value="AIzaSyCGMjg2k_WgeX2aaLVdEKwzPfTDAHWN9oc" />
+        -->
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".DeliveryAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeliveryMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecyclerListFragment"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".LocationService" />
+
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.psquare.delivery"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <activity
+            android:name=".SurveyMapActivity"
+            android:label="@string/title_activity_survey_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyCurrentLocationActivity"
+            android:label="@string/title_activity_survey_current_location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DistanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyCoveredMapActivity"
+            android:label="@string/title_activity_survey_covered_map" />
+
+        <service android:name=".distance.model.api.impl.ActivityRecognizerImpl$ActivityRecognitionIntentService" />
+        <service android:name=".distance.model.service.TrackingService" />
+
+        <receiver android:name=".distance.model.service.OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".distance.view.activity.MeasurementActivity" />
+        <activity android:name=".distance.view.fragment.MeasurementDetailFragment"></activity>
+    </application>
+
+</manifest>

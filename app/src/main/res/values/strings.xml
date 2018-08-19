@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">PSquare Delivery</string>
+
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="user_Array">
+        <item>Select User type</item>
+        <item>Delivery Boy</item>
+        <item>Survey boy</item>
+        <item>So</item>
+    </string-array>
+
+    <string-array name="District_array">
+        <item> District</item>
+    </string-array>
+
+    <string-array name="Tehsil_array">
+        <item> Tehsil</item>
+    </string-array>
+    <string name="title_activity_survey_map">Map</string>
+    <string name="title_activity_survey_current_location">Map</string>
+    <string name="title_activity_survey_covered_map">Map</string>
+    <string name="arrivaldate">arrivaldate</string>
+
+
+    <string name="pedometro_preferences">PSquare Preferences</string>
+    <string name="pedometro_preferences_starttracking">PSquare Preferences Start Tracking</string>
+
+    <!--HomeActivity -->
+    <string name="activityhome_latitudelongitude">latitude: %1$f longitude: %2$f</string>
+    <string name="activityhome_warntracking">Tracking…</string>
+    <string name="activityhome_warntrackingpaused">The tracking has been paused</string>
+
+    <!--MeasurementActivity-->
+    <string name="measurementactivity_title">Measurements</string>
+    <string name="measurementactivity_today">Today</string>
+    <string name="measurementactivity_week">Week</string>
+
+    <!--MeasurementDetailFragment-->
+    <string name="measurementdetailfragment_measuredistance">Distance: %1$.2f Km</string>
+    <string name="measurementdetailfragment_measuretime">Time: %1$.2f Hours</string>
+    <string name="measurementdetailfragment_measureaveragespeed">Average Speed: %1$.2f km/h</string>
+
+    <string name="distance">Distance</string>
+    <string name="title_activity_survey_boy_home">Survey Boy Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="covered_distance">COVERED DISTANCE</string>
+</resources>

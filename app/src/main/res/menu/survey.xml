@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/add_survey"
+        android:checkable="false"
+        android:title="Add Survey"
+        />
+
+    <item
+        android:id="@+id/Show_area"
+        android:checkable="false"
+        android:title="Covered Area by Me" />
+
+
+    <item
+        android:id="@+id/area"
+        android:checkable="false"
+        android:title="Covered Area by All" />
+
+    <item
+        android:id="@+id/show_km"
+        android:checkable="false"
+        android:title="Show covered distance"/>
+
+    <item
+        android:id="@+id/pincode_area"
+        android:checkable="false"
+        android:title="Select Pincode area"/>
+
+
+
+
+    <item
+        android:id="@+id/change_password"
+        android:checkable="false"
+        android:title="Change password" />
+
+    <item
+        android:id="@+id/logout1"
+        android:checkable="false"
+        android:title="Logout" />
+</menu>
